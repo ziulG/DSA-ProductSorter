@@ -1,5 +1,6 @@
 package main.java.br.com.productSorter.util;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,10 +20,18 @@ public class ProductGenerator {
     private static final Random random = new Random();
 
     public static void main(String[] args) {
+        String diretorioDestino = "src/main/java/resources/";
+        
+        // Garantir que o diretório existe
+        File dir = new File(diretorioDestino);
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        
         int[] tamanhos = {1000, 10000, 100000, 1000000};
         
         for (int tamanho : tamanhos) {
-            String nomeArquivo = "produtos_" + tamanho + ".txt";
+            String nomeArquivo = diretorioDestino + "produtos_" + tamanho + ".txt";
             try (PrintWriter writer = new PrintWriter(new FileWriter(nomeArquivo))) {
                 for (int i = 0; i < tamanho; i++) {
                     writer.println(gerarProduto());
