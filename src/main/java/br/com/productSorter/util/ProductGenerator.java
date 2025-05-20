@@ -1,4 +1,4 @@
-package deinf.ufma.br.ordenacao;
+package main.java.br.com.productSorter.util;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,14 +7,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
-public class GeradorProduto {
+//NOME PRODUTO, FABRICANTE, PREÇO, VALIDADE.
 
-    private static final String[] CATEGORIAS = {
-        "BISCOITOS", "CEREAIS", "LATICINIOS", "BEBIDAS", 
-        "CONGELADOS", "HIGIENE", "LIMPEZA"
-    };
+public class ProductGenerator {
 
-    private static final String[] MARCAS = {
+    private static final String[] FABRICANTES = {
         "NESTLE", "BAUDUCO", "UNIÃO", "YOKI", "SADIA", 
         "PERDIGÃO", "COCA-COLA", "DOVE", "OMO"
     };
@@ -39,14 +36,13 @@ public class GeradorProduto {
 
     private static String gerarProduto() {
         String nome = "PRODUTO_" + (random.nextInt(10000) + 1);
-        String marca = MARCAS[random.nextInt(MARCAS.length)];
+        String fabricante = FABRICANTES[random.nextInt(FABRICANTES.length)];
         double preco = 1.0 + (50.0 - 1.0) * random.nextDouble();
         String dataValidade = gerarDataValidade();
-        String categoria = CATEGORIAS[random.nextInt(CATEGORIAS.length)];
 
         return String.format(
-            "%s # %s # %.2f # %s # %s",
-            nome, marca, preco, dataValidade, categoria
+            "%s # %s # %.2f # %s",
+            nome, fabricante, preco, dataValidade
         );
     }
 
