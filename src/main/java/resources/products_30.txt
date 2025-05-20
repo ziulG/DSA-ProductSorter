@@ -1,0 +1,32 @@
+Detergente Líquido # Ypê # 2.30 # 20072025
+Papel Higiênico # Neve # 11.90 # 15032026
+Sabonete em Barra # Dove # 3.75 # 04082024
+Shampoo Anticaspa # Clear # 16.50 # 09112025
+Creme Dental # Colgate # 5.10 # 31012025
+Desodorante Aerosol # Rexona # 8.90 # 27092024
+Amaciante de Roupas # Comfort # 9.40 # 12062026
+Água Mineral 1,5L # Crystal # 2.80 # 22022025
+Refrigerante Cola 2L # Coca-Cola # 7.25 # 06052024
+Suco de Uva Integral # Del Valle # 10.60 # 01122025
+Iogurte Natural # Danone # 3.90 # 28032024
+Margarina com Sal # Qualy # 6.35 # 08072024
+Pão de Forma # Pullman # 7.10 # 14062024
+Queijo Mussarela # Tirolez # 24.90 # 17112023
+Presunto Cozido # Sadia # 21.75 # 09092024
+Frango Congelado # Seara # 13.80 # 23122024
+Carne Moída # Friboi # 29.50 # 17012025
+Arroz Parboilizado # Prato Fino # 9.20 # 01082026
+Feijão Carioca # Kicaldo # 7.40 # 29052024
+Farinha de Trigo # Dona Benta # 4.95 # 06102025
+Achocolatado em Pó # Nescau # 7.60 # 03112024
+Cereal Matinal # Nesfit # 11.20 # 10122025
+Biscoito de Polvilho # Piraquê # 3.10 # 12072024
+Leite Condensado # Moça # 5.90 # 28082025
+Creme de Leite # Nestlé # 4.35 # 30062024
+Gelatina Morango # Dr. Oetker # 1.45 # 25032026
+Milho Verde Lata # Bonduelle # 3.85 # 10052026
+Ervilha Congelada # Swift # 6.30 # 03092024
+Salsicha Hot Dog # Perdigão # 10.99 # 19112024
+Sorvete Napolitano # Kibon # 17.90 # 15022025
+Pipoca de Micro-ondas # Yoki # 4.50 # 20052024
+Batata Palha # McCain # 8.20 # 15082025
