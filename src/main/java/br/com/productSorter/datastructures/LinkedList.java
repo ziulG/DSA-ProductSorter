@@ -23,13 +23,17 @@ public class LinkedList {
     }
 
     /**
-     * Ordena a lista encadeada por NOME DO FABRICANTE usando Insertion Sort.
-     * Baseado no conceito de Insertion Sort para arrays (aula5_Ordenacao.pdf, slides 24-29),
-     * adaptado para uma lista encadeada.
-     * O método constrói uma nova lista ordenada ("sorted") inserindo cada nó
-     * da lista original ("this.cabeca") em sua posição correta na lista ordenada.
+     * Ordena a lista encadeada por NOME DO PRODUTO usando Insertion Sort.
+     * Baseado no algoritmo InsertionSort visto em aula:
+     * Em cada passo a partir de i=2:
+     * - Selecione o i-ésimo item da sequência fonte
+     * - Coloque-o no lugar apropriado na sequência destino de acordo com o critério de ordenação
+     * - Os elementos à esquerda do número eleito estão sempre ordenados de forma crescente
+     * 
+     * Adaptado para uma lista encadeada, constrói uma nova lista ordenada ("sorted") 
+     * inserindo cada nó da lista original em sua posição correta na lista ordenada.
      */
-    public void insertionSortByFabricante() {
+    public void insertionSortByNomeProduto() {
         if (head == null || head.next == null) {
             return; // Lista vazia ou com um único elemento já está ordenada.
         }
@@ -45,7 +49,7 @@ public class LinkedList {
 
             // Insere 'current' na lista 'sortedListHead'
             if (sortedListHead == null ||
-                current.product.getFabricante().compareToIgnoreCase(sortedListHead.product.getFabricante()) <= 0) {
+                current.product.getNome().compareToIgnoreCase(sortedListHead.product.getNome()) <= 0) {
                 // Insere no início da lista ordenada
                 current.next = sortedListHead;
                 sortedListHead = current;
@@ -53,7 +57,7 @@ public class LinkedList {
                 // Encontra a posição correta para inserir 'current' na lista ordenada
                 ListNode search = sortedListHead;
                 while (search.next != null &&
-                       current.product.getFabricante().compareToIgnoreCase(search.next.product.getFabricante()) > 0) {
+                       current.product.getNome().compareToIgnoreCase(search.next.product.getNome()) > 0) {
                     search = search.next;
                 }
                 // Insere 'current' após 'search'
@@ -64,7 +68,6 @@ public class LinkedList {
         }
         this.head = sortedListHead; // Atualiza a cabeça da lista original para a lista ordenada
     }
-
 
     public void printList() {
         ListNode current = head;

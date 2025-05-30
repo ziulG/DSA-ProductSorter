@@ -40,7 +40,7 @@ public class MainApp {
             System.out.println("1. Ordenar por NOME do produto (ShellSort Modificado)");
             System.out.println("2. Ordenar por PREÇO (QuickSort com Mediana de 3 e Particionamento Único Cursor)");
             System.out.println("3. Ordenar por DATA DE VALIDADE (HeapSort Iterativo)");
-            System.out.println("4. Ordenar por FABRICANTE (InsertionSort em Lista Encadeada, ordenado por nome do produto)");
+            System.out.println("4. Ordenar por NOME DO PRODUTO (InsertionSort em Lista Encadeada)");
             System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
 
@@ -79,14 +79,14 @@ public class MainApp {
                         System.out.println("Tempo de execução (HeapSort por Validade): " + (endTimeHeap - startTimeHeap) / 1_000_000 + " ms");
                         break;
                     case 4:
-                        System.out.println("\n--- Ordenando por FABRICANTE (InsertionSort em Lista Encadeada, ordenado por nome do produto)... ---");
+                        System.out.println("\n--- Ordenando por NOME DO PRODUTO (InsertionSort em Lista Encadeada)... ---");
                         // Para esta opção, criamos uma nova lista encadeada a partir dos produtos originais
                         LinkedList listaProdutos = LinkedList.fromArray(productsOriginais);
                         long startTimeList = System.nanoTime();
-                        listaProdutos.insertionSortByFabricante(); // O método ordena por FABRICANTE
+                        listaProdutos.insertionSortByNomeProduto(); // O método ordena por NOME DO PRODUTO
                         long endTimeList = System.nanoTime();
                         listaProdutos.printList();
-                        System.out.println("Tempo de execução (InsertionSort Lista por Fabricante): " + (endTimeList - startTimeList) / 1_000_000 + " ms");
+                        System.out.println("Tempo de execução (InsertionSort Lista por Nome do Produto): " + (endTimeList - startTimeList) / 1_000_000 + " ms");
                         break;
                     case 5:
                         System.out.println("Saindo do programa.");
