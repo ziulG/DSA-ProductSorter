@@ -37,9 +37,9 @@ public class MainApp {
 
         do {
             System.out.println("\n--- Menu de Ordenação de Produtos ---");
-            System.out.println("1. Ordenar por NOME do produto (ShellSort Modificado)");
-            System.out.println("2. Ordenar por PREÇO (QuickSort com Mediana de 3 e Particionamento Único Cursor)");
-            System.out.println("3. Ordenar por DATA DE VALIDADE (HeapSort Iterativo)");
+            System.out.println("1. Ordenar por NOME do produto (ShellSort Modificado - SelectionSort/InsertionSort)");
+            System.out.println("2. Ordenar por PREÇO (QuickSort - Mediana de 3 + Particionamento Único Cursor)");
+            System.out.println("3. Ordenar por DATA DE VALIDADE (HeapSort Iterativo - Max-Heap)");
             System.out.println("4. Ordenar por NOME DO PRODUTO (InsertionSort em Lista Encadeada)");
             System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
@@ -52,7 +52,7 @@ public class MainApp {
 
                 switch (escolha) {
                     case 1:
-                        System.out.println("\n--- Ordenando por NOME do produto (ShellSort Modificado)... ---");
+                        System.out.println("\n--- Ordenando por NOME do produto (ShellSort)... ---");
                         productsParaOrdenar = Arrays.copyOf(productsOriginais, productsOriginais.length);
                         long startTimeShell = System.nanoTime();
                         ShellSort.shellSortByName(productsParaOrdenar);
@@ -61,7 +61,7 @@ public class MainApp {
                         System.out.println("Tempo de execução (ShellSort por Nome): " + (endTimeShell - startTimeShell) / 1_000_000 + " ms");
                         break;
                     case 2:
-                        System.out.println("\n--- Ordenando por PREÇO (QuickSort Mediana de 3)... ---");
+                        System.out.println("\n--- Ordenando por PREÇO (QuickSort)... ---");
                         productsParaOrdenar = Arrays.copyOf(productsOriginais, productsOriginais.length);
                         long startTimeQuick = System.nanoTime();
                         QuickSort.quickSortByPrice(productsParaOrdenar);
