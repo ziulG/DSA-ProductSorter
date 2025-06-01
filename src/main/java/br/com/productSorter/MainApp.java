@@ -16,7 +16,7 @@ import main.java.br.com.productSorter.model.Product;
 
 public class MainApp {
 
-    private static final String NOME_ARQUIVO_ENTRADA = "src/main/java/resources/products_30.txt";
+    private static final String NOME_ARQUIVO_ENTRADA = "src/main/java/resources/produtos_1000000.txt";
 
     public static void main(String[] args) {
         Product[] productsOriginais = lerProdutosDoArquivo(NOME_ARQUIVO_ENTRADA);
